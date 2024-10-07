@@ -1,0 +1,5 @@
+package com.br.api.model;
+
+public class User {
+
+}

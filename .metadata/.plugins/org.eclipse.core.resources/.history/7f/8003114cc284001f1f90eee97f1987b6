@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  user-service:
+	build: ./user-service
+	ports:
+		- "8081:8080"
+	environment:
+		SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/userdb
+		SPRING_DATASOURCE_USERNAME: user
+		SPRING_DATASOURCE_PASSWORD: password
+	postgres:
+		image: postgres:12
+		environment:
+			POSTGRES_DB: userdb
+			POSTGRES_USER: user
+			POSTGRES_PASSWORD: password
+		ports:
+			- "5432:5432"
+	redis:
+		image: redis:alpine
+		ports:
+			- "6379:6379"
+        
