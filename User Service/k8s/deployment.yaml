@@ -24,4 +24,3 @@ spec:
               value: "user"
             - name: SPRING_DATASOURCE_PASSWORD
               value: "password"
-	

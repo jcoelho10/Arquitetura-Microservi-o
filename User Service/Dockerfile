@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 # WORKDIR /app
 
 # Copiando o JAR do serviço para o diretório de trabalho
-COPY target/user-service.jar user-service.jar
+COPY target/API-0.0.1-SNAPSHOT.jar user-service.jar
 
 # Expondo a porta em que a aplicação será executada
 # EXPOSE 8080
